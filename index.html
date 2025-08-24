@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Love ♥</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <audio id="bg_music" loop src=""></audio>
+    <div class="container">
+        <img src="luv_letter.png" class="letter" onclick="openLetter()">
+        <div class="typewriter">
+            <h2 class="vt323-regular">You have 1 new message</h2>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            const music = document.getElementById();
+            music.play();
+            
+            window.pywebview.api.get_message().then(msg => {
+                document.body.innerHTML = `
+                    <div class="message-screen">
+                        <p class="vt323-regular">${msg}</p>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
