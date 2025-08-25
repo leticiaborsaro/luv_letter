@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <audio id="bg_music" loop src=""></audio>
+    <!--<audio id="bg_music" loop src=""></audio> -->
     <div class="container">
         <img src="luv_letter.png" class="letter" onclick="openLetter()">
         <div class="typewriter">
@@ -23,8 +23,8 @@
 
     <script>
         function openLetter() {
-            const music = document.getElementById();
-            music.play();
+            //const music = document.getElementById();
+            //music.play();
             
             window.pywebview.api.get_message().then(msg => {
                 document.body.innerHTML = `
